@@ -39,7 +39,7 @@
                             <li><a href="">Reviews</a></li>
                         </ul>
                     </nav>
-                    <button class="cta-btn">Sign Up</button>
+                    <button class="cta-btn header-sign-up">Sign Up</button>
                 </div>
             </div>
         </div>
@@ -117,7 +117,7 @@
                           
                         </div>
                     </div>
-                    <h2 class="trigger-headign">Recent engagement</h2>
+                    <h2 class="trigger-headign" id="waypoint-test">Recent engagement</h2>
                     <div class="data">
                         <div class="single-data">
                             <h2 class="counter1">50</h2>
@@ -449,17 +449,21 @@
         </div>
         
     </footer>
-
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js" integrity="sha512-nhY06wKras39lb9lRO76J4397CH1XpRSLfLJSftTeo3+q2vP7PaebILH9TqH+GRpnOhfAGjuYMVmVTOZJ+682w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
         <script src="./js/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="./js/waypoints.min.js"></script>
+        <script src="./js/scripts.js"></script>
+        <script src="./js/inview.js"></script>
         <script src="./js/sticky.js"></script>
         <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">	</script>
         <script src="./js/slick.min.js"></script>
         <script src="./js/main.js"></script>
+        <script src="./js/debug.js"></script>
 
 
 
     <script>
+    const myelement =  document.getElementById('waypoint-test');
     const counterUp = window.counterUp.default
     const trigger = document.querySelector('.trigger-headign')
     console.log(trigger);
@@ -468,15 +472,30 @@
     const el2 = document.querySelector( '.counter2' )
 
     new Waypoint( {
-    element: el,
+    element: myelement,
     handler: function() { 
         counterUp( el ) 
         counterUp(el2 ) 
-        this.destroy()
     },
     offset: 'bottom-in-view',
     } )
 
+
+
+        
+    
+       
+        console.log(myelement);
+        var waypoint = new Waypoint({
+        element: myelement,
+        handler: function() {
+        // alert('Basic waypoint triggered')
+
+
+    }
+    })
+
+    
     </script>
 </body>
 </html>

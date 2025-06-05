@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5, h6{
     font-size: 16px;
     line-height: 28px;
     font-weight: 600;
+    transition: all .4s ease-in-out;
 }
 
 .single-blog:hover .cta-btn{
@@ -101,6 +102,9 @@ h1, h2, h3, h4, h5, h6{
     transform: scaleX(1);
 }
 
+.header-sign-up:hover{
+    background-color: #FFB900;
+}
 /* banner */
 .banner{
     background-color: #FFFCF4;
@@ -211,6 +215,11 @@ h1, h2, h3, h4, h5, h6{
     padding: 17px 34px;
     background-color: #FFB900;
     border-radius: 32px;
+    transition: all .4s ease-in-out;
+}
+
+.courses:hover{
+    background-color: #171100;
 }
 .buttons{
     display: flex;
