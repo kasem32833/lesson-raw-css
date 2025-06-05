@@ -1,0 +1,20 @@
+@media screen and (max-width: 600px) {
+    .main-menu{
+        display: none;
+    }
+    .blog-wrapepr{
+        justify-content: center;
+    }
+    .single-blog{
+       max-width: 100%;
+      
+    }
+    .footer-wrapper{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .section-heading{
+        width: 350px;
+    }
+}

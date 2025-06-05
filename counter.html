@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Up</title>
+</head>
+<body>
+    <div style="margin:100vh auto; height: 100vh; justify-content: center;  display: flex; align-items: center;">
+        <div style="width: 200px; height: 200px; background-color: aquamarine;"  class="counter">500 downloads</div>
+       
+      
+    </div>
+    
+
+
+
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/waypoints.min.js"></script>
+    <script src="./js/counterup.js"></script>
+
+    <script>
+        const el = document.querySelector( '.counter' );
+        const  counterUp  = window.counterUp.default
+
+
+        new Waypoint( {
+            element: el,
+            handler: function() { 
+                counterUp( el, {
+                    duration: 10000,
+                    delay: 40
+                }) 
+                this.destroy()
+            },
+            offset: 'bottom-in-view',
+        } )
+
+
+    </script>
+</body>
+</html>
