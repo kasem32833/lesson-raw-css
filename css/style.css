@@ -470,23 +470,39 @@ button.book-now:hover{
     color: white;
     margin-bottom: 200px;
 }
+.single-testimonial{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .user-info p{
     color: #BFBCB2;
 }
 .user-review{
     max-width: 60%;
+    position: relative;
+    z-index: 1;
+    margin-top: 30px;
 }
+
+.coute-icon{
+    position: absolute;
+    left: -30px;
+    top: -28px;
+    width: 30px;
+    height: 28px;
+    fill: #634700;
+    z-index: 10;
+
+}
+
 .user-review p{
     font-style: italic;
     font-size: 26px;
     line-height: 40px;
     
 }
-.single-testimonial{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
 
 .user-info img{
     width: 72px;
